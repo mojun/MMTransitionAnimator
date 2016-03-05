@@ -17,7 +17,7 @@ MMTransitionAnimator is available through [CocoaPods](http://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MMTransitionAnimator"
+pod "MMTransitionAnimator", "~> 0.0.1"
 ```
 
 ## Author
