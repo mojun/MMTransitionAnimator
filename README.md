@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/MMTransitionAnimator.svg?style=flat)](http://cocoapods.org/pods/MMTransitionAnimator)
 [![Platform](https://img.shields.io/cocoapods/p/MMTransitionAnimator.svg?style=flat)](http://cocoapods.org/pods/MMTransitionAnimator)
 
+Custom transition & interactive transition animator for iOS. written in Objective-C.(Swift [ARNTransitionAnimator](https://github.com/xxxAIRINxxx/ARNTransitionAnimator))
+
 ![MMTransitionAnimator](gifs/interact.gif "MMTransitionAnimator")
 
 ## Usage
