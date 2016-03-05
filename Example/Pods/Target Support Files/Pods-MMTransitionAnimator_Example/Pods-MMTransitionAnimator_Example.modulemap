@@ -1,0 +1,6 @@
+framework module Pods_MMTransitionAnimator_Example {
+  umbrella header "Pods-MMTransitionAnimator_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

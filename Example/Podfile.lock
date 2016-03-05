@@ -1,0 +1,14 @@
+PODS:
+  - MMTransitionAnimator (0.0.1)
+
+DEPENDENCIES:
+  - MMTransitionAnimator (from `../`)
+
+EXTERNAL SOURCES:
+  MMTransitionAnimator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MMTransitionAnimator: dc87d441110ce27f096a4bc61a3aa7749ee6499e
+
+COCOAPODS: 0.39.0
