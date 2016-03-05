@@ -14,12 +14,31 @@
 
 @end
 
-@implementation ModalViewController
+@implementation ModalViewController {
+    UIImageView *_bgView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:[self bgView]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _bgView.frame = self.view.bounds;
+}
+
+#pragma mark - getters
+- (UIImageView *)bgView {
+    if (_bgView == nil) {
+        _bgView = [[UIImageView alloc]init];
+        _bgView.image = [UIImage imageNamed:@"modal_bg"];
+        _bgView.contentMode = UIViewContentModeScaleToFill;
+        _bgView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+    }
+    return _bgView;
 }
 
 - (void)didReceiveMemoryWarning {

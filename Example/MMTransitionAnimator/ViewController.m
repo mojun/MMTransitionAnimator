@@ -10,13 +10,14 @@
 #import "ModalViewController.h"
 #import "PlaylistViewController.h"
 #import "UIView+LayoutMethods.h"
+#import "MMHandleBarView.h"
 
 #define kHandleBarHeight 55
 
 @interface ViewController ()
 
 @property (nonatomic, strong) UIView *containerView;
-@property (nonatomic, strong) UIView *handleBarView;
+@property (nonatomic, strong) MMHandleBarView *handleBarView;
 @property (nonatomic, strong) MMTransitionAnimator *animator;
 @property (nonatomic, strong) ModalViewController *modalVC;
 @property (nonatomic, strong) PlaylistViewController *playlistVC;
@@ -45,18 +46,20 @@
     CGRect containerRect = self.view.bounds;
     containerRect.size.height -= kHandleBarHeight;
     _containerView.frame = containerRect;
+    _playlistVC.view.frame = _containerView.bounds;
     
     if (CGRectEqualToRect(_handleBarView.frame, CGRectZero)) {
         containerRect.origin.y = containerRect.size.height;
         containerRect.size.height = kHandleBarHeight;
         _handleBarView.frame = containerRect;
     }
+    
 }
 
 #pragma mark - private methods
 - (void)setupVC {
     [[self playlistVC] willMoveToParentViewController:self];
-    [self addChildViewController:_playlistVC];
+    [self addChildViewController:[self playlistVC]];
     [_containerView addSubview:_playlistVC.view];
     [_playlistVC didMoveToParentViewController:self];
     
@@ -177,12 +180,15 @@
     self.modalVC.transitioningDelegate = self.animator;
 }
 
+- (void)handleTap:(UIGestureRecognizer *)gesture {
+    self.animator.interactiveType = MMTransitionAnimatorOperationNone;
+    [self presentViewController:self.modalVC animated:YES completion:nil];
+}
+
 #pragma mark - getters
 - (UIView *)containerView {
     if (_containerView == nil) {
-        _containerView = [UIView new];
-        
-        _containerView.translatesAutoresizingMaskIntoConstraints = NO;
+        _containerView = [[UIView alloc]init];
         _containerView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
         _containerView.clipsToBounds = YES;
         
@@ -192,17 +198,20 @@
 
 - (UIView *)handleBarView {
     if (_handleBarView == nil) {
-        _handleBarView = [UIView new];
+        _handleBarView = [[MMHandleBarView alloc]init];
         _handleBarView.clipsToBounds = YES;
-        _handleBarView.backgroundColor = [UIColor yellowColor];
+        _handleBarView.backgroundColor = [UIColor whiteColor];
         _handleBarView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
+        [_handleBarView addGestureRecognizer:tap];
     }
     return _handleBarView;
 }
 
 - (ModalViewController *)modelVC {
     if (!_modalVC) {
-        _modalVC = [ModalViewController new];
+        _modalVC = [[ModalViewController alloc]init];
         _modalVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
     }
     return _modalVC;

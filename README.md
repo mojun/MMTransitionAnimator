@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/MMTransitionAnimator.svg?style=flat)](http://cocoapods.org/pods/MMTransitionAnimator)
 [![Platform](https://img.shields.io/cocoapods/p/MMTransitionAnimator.svg?style=flat)](http://cocoapods.org/pods/MMTransitionAnimator)
 
+![MMTransitionAnimator](gifs/interact.gif "MMTransitionAnimator")
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

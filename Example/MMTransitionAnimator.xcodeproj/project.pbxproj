@@ -15,6 +15,7 @@
 		332516AE1C8ACC9C0057DDFD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 332516AA1C8ACC9C0057DDFD /* README.md */; };
 		332516AF1C8ACC9C0057DDFD /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 332516AC1C8ACC9C0057DDFD /* UIView+LayoutMethods.m */; };
 		332B36E21C8ACDAA00553BFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332B36E11C8ACDAA00553BFD /* LaunchScreen.xib */; };
+		333A01F21C8ADF830064B7B1 /* MMHandleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333A01F11C8ADF830064B7B1 /* MMHandleBarView.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 		332516AB1C8ACC9C0057DDFD /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
 		332516AC1C8ACC9C0057DDFD /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
 		332B36E11C8ACDAA00553BFD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		333A01F01C8ADF830064B7B1 /* MMHandleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHandleBarView.h; sourceTree = "<group>"; };
+		333A01F11C8ADF830064B7B1 /* MMHandleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHandleBarView.m; sourceTree = "<group>"; };
 		58111DD851E4F35421E60AF4 /* Pods_MMTransitionAnimator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMTransitionAnimator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB9EF020C1228F12CCE3230 /* MMTransitionAnimator.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MMTransitionAnimator.podspec; path = ../MMTransitionAnimator.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MMTransitionAnimator_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMTransitionAnimator_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ViewController.h */,
 				6003F5A6195388D20070C39A /* ViewController.m */,
+				333A01F01C8ADF830064B7B1 /* MMHandleBarView.h */,
+				333A01F11C8ADF830064B7B1 /* MMHandleBarView.m */,
 				332516A21C8ACC7E0057DDFD /* PlaylistViewController.h */,
 				332516A31C8ACC7E0057DDFD /* PlaylistViewController.m */,
 				332516A41C8ACC7E0057DDFD /* ModalViewController.h */,
@@ -430,6 +435,7 @@
 			files = (
 				332516AE1C8ACC9C0057DDFD /* README.md in Sources */,
 				332516A61C8ACC7E0057DDFD /* PlaylistViewController.m in Sources */,
+				333A01F21C8ADF830064B7B1 /* MMHandleBarView.m in Sources */,
 				6003F59E195388D20070C39A /* MMAppDelegate.m in Sources */,
 				332516A71C8ACC7E0057DDFD /* ModalViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* ViewController.m in Sources */,
