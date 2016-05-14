@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name         = 'MMTransitionAnimator'
-  s.version      = '0.0.1'
+  s.version      = '0.0.2'
   s.license      = { :type => 'MIT',
                       :text => 'copyright' }
   s.homepage	   = 'https://github.com/mojun/MMTransitionAnimator'
   s.authors      = { 'mojun' => 'immojun@gmail.com' }
   s.summary      = 'Custom transition & interactive transition animator for iOS. written in Objective-C.'
   s.source       = { :git => 'https://github.com/mojun/MMTransitionAnimator.git', 
-                     :tag => '0.0.1' }
+                     :tag => '0.0.2' }
   s.source_files = 'Classes','Classes/MMTransitionAnimator/*.{h,m}'
   s.requires_arc = true
   s.platform     = :ios, '8.0'
