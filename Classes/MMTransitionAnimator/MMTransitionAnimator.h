@@ -56,6 +56,8 @@ typedef NS_ENUM(NSInteger, MMTransitionAnimatorOperation) {
 @property (nonatomic, copy) void (^dismissalCancelAnimationHandler)(UIView *containerView);
 @property (nonatomic, copy) void (^dismissalCompletionHandler)(UIView *containerView, BOOL completeTransition);
 
+@property (nonatomic, copy) BOOL (^gestureRecognizerShouldBegin)(UIGestureRecognizer *gesture);
+
 - (instancetype)initWithOperationType:(MMTransitionAnimatorOperation)operationType
                                fromVC:(UIViewController *)fromVC
                                  toVC:(UIViewController *)toVC;

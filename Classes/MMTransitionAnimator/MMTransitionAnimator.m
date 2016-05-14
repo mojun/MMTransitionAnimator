@@ -169,6 +169,15 @@
     return NO;
 }
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+ 
+    if (self.gestureRecognizerShouldBegin) {
+        return self.gestureRecognizerShouldBegin(gestureRecognizer);
+    } else {
+        return YES;
+    }
+}
+
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
     return self.transitionDuration;
